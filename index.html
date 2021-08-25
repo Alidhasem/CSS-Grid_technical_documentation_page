@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS Grid</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav id="nav-bar">
+        <header>Introduction to CSS Grid</header>
+        <a href="#Turn_an_element_into_a_grid-container" class="nav-link">Turn an element into a grid container</a>
+        <a href="#Add_columns_to_a_grid_container" class="nav-link">Add columns to a grid container</a>
+        <a href="Add_rows_to_a_grid_container " class="nav-link">Add rows to a grid container</a>
+        <a href="Units_used_with_CSS_grid" class="nav-link">Units used with CSS grid</a>
+        <a href="#Give_a_gap_to_the_columns_in_a_grid" class="nav-link">Give a gap to the columns in a grid</a>
+        <a href="#Give_a_gap-to_the_rows_in_a_grid" class="nav-link">Give a gap to the rows in a grid</a>
+        <a href="#Add_gaps_faster" class="nav-link">Add gaps faster</a>
+        <a href="#Lines_in_a_grid" class="nav-link">Lines in a grid</a>
+        <a href="" class="Control_the_number_of_columns_an_item_will_use">Control the number of columns an item will use</a>
+        <a href="#Control_the_number_of_rows_an_item_will_use" class="nav-link">Control the number of rows an item will use</a>
+        <a href="#Align_an_item_horizontally" class="nav-link">Align an item horizontally</a>
+        <a href="#Align_an_item_vertically" class="nav-link">Align an item vertically</a>
+        <a href="#Align_all_the_items_horizontally" class="nav-link">Align all the items horizontally</a>
+        <a href="#Align_all_the_items_vertically" class="nav-link">Align all the items vertically</a>
+        <a href="#Divide_a_grid_into_an_area_template" class="nav-link">Divide a grid into an area template</a>
+        <a href="#Place_items_in_grid_areas" class="nav-link">Place items in grid areas</a>
+        <a href="#Use_grid-area_without_creating_an_areas_template" class="nav-link">Use grid-area without creating an areas template</a>
+        <a href="" class="nav-link"></a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="CSS_Grid">
+            <header>CSS Grid</header>
+        </section>
+        <section class="main-section" id="Turn_an_element_into_a_grid_container">
+            <header>Turn an element into a grid container</header>
+            <p>You can do this by setting its <code> display </code> to <code> grid</code>.</p> 
+        </section>
+       <section class="main-section" id="Add_columns_to_a_grid_container">
+           <header>Add columns to a grid container</header>
+           <p>
+                To add some columns to the grid, use the <code> grid-template-columns </code> property.
+           </p>
+           <p>
+                The number of parameters given to this property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column. Here is an example:
+           </p>
+           <code>
+            .container {
+                display: grid;
+                grid-template-columns: 50px 50px;
+            }   
+           </code>
+       </section>
+       <section class="main-section" id="Add_rows_to_a_grid_container">
+           <header>Add rows to a grid container</header>
+           <p>
+                To adjust the rows manually, use the <code> grid-template-rows </code> property in the same way you used <code>grid-template-columns</code>.
+           </p>
+       </section>
+       <section class="main-section" id="Units_used_with_CSS_grid">
+            <header>Units used with CSS grid</header>
+            <p>
+                You can use absolute and relative units. Also, you can use
+                <ul>
+                    <li>
+                        <code> fr </code>
+                    </li>
+                    <li>
+                        <code> auto </code>
+                    </li>
+                    <li>
+                        <code> % </code>
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section class="main-section" id="Give_a_gap_to_the_columns_in_a_grid">
+            <header>Give a gap to the columns in a grid </header>
+            <p>To add a gap between the columns, use the <code> grid-column-gap </code> property as in the next example. The image gives you visual help of the result.</p>
+            <code>
+                grid-column-gap: 20px; 
+            </code>
+            <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9415daae-5d3c-4736-92d6-2a8483cd772b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210825%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210825T221612Z&X-Amz-Expires=86400&X-Amz-Signature=fdbafef77160bf0328be3224a2e505915cec18cae70688715c91491e5bf6d92a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" alt="">
+        </section>
+        <section class="main-section" id="Give_a_gap_to_the_rows_in_a_grid ">
+            <header>Give a gap to the rows in a grid </header>
+            <p>To add a gap between the rows in a grid, use the <code>grid-row-gap</code> property in the same way that you use the <code>grid-column-gap</code> property.</p>
+        </section>
+        <section class="main-section" id="Add_gaps_faster">
+            <header>Add gaps faster</header>
+            <p>
+                The <code> grid-gap </code> property is a shorthand property for <code> grid-row-gap </code> and <code> grid-column-gap </code>.
+            </p>
+            <p>If grid-gap has one value, it will create a gap between all rows and columns.</p>
+            <p>If there are two values, it will use the first one to set the gap between the rows and the second value for the columns.</p>
+        </section>
+        <section class="main-section" id="Lines_in_a_grid">
+            <header>Lines in a grid</header>
+            <p>The hypothetical horizontal and vertical lines that create the grid are referred to as lines.</p>
+            <p>These lines are numbered starting with 1 at the top left corner of the grid and move right for columns and down for rows.</p> 
+            <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cfff23ca-bdc0-48f6-af03-a2614bf13345/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210825%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210825T222832Z&X-Amz-Expires=86400&X-Amz-Signature=9d4ea737b6c197555e7e236fee8da2161cf543d5c8841582cfc0a9ae3b2768f3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" alt="">
+        </section>
+        <section class="main-section" id="Control_the_number_of_columns_an_item_will_use ">
+            <header>Control the number of columns an item will use</header>
+            <p>To achieve this, you can use the <code>grid-column</code> property in the element, in conjunction with the line numbers you want the item to start and stop at. The following example show you wow to do it.</p>
+            <code>grid-column: 1 / 3;</code>
+        </section>
+        <section class="main-section" id="Control_the_number_of_rows_an_item_will_use">
+            <header>Control the number of rows an item will use</header>
+            <p>
+                You define the horizontal lines you want an item to start and stop at using the <code>grid-row property</code> on a grid item.
+            </p>
+        </section>
+        <section class="main-section" id="Align_an_item_horizontally">
+            <header>Align an item horizontally</header>
+            <p>You can align the horizontal content's position within an item using the <code> justify-self property </code> on a grid item.</p>
+            <p>
+                By default, this property has a value of <code> stretch </code>, which will make the content fill the whole width of the cell.
+            </p>
+            <p>
+                Other values accepted for this property are:
+            </p>
+            <ul>
+                <li>
+                    <code> start </code>: aligns the content at the left of the cell.
+                </li>
+                <li>
+                    <code> center </code>: aligns the content in the center of the cell.
+                </li>
+                <li>
+                    <code> end </code>: aligns the content at the right of the cell.
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="Align_an_item_vertically ">
+            <header>Align an item vertically</header>
+            <p>To do this, you use the <code> align-self </code> property on an item. </p>
+            <p>
+                This property accepts all of the same values as <code> justify-self </code> from the last challenge
+            </p>
+        </section>
+        <section class="main-section" id="Align_all_the_items_horizontally">
+            <header>Align all the items horizontally</header>
+            <p>
+                You can align all the items in a grid container at once horizontally by using <code> justify-items </code> on your grid container.
+            </p>
+        </section>
+        <section class="main-section" id="Align_all_the_items_vertically">
+            <header>Align all the items vertically</header>
+            <p>
+                You can align all the items in a grid container at once vertically by using <code> align-items </code> on your grid container.
+            </p>
+        </section>
+        <section class="main-section" id="Divide_a_grid_into_an_area_template">
+            <header>CSS Grid</header>
+            <p>Do this by using <code> grid-template-areas </code> as in the next example.</p>
+            <code>
+                grid-template-areas:
+                    "header header header"
+                    "advert content content"
+                    "footer footer footer";       
+            </code>
+            <p>You can use a period (<code> . </code>) to designate an empty cell in the grid.</p>
+        </section>
+        <section class="main-section" id="Place_items_in_grid_areas">
+            <header>Place items in grid areas</header>
+            <p>You can place an item in your custom area giving its name as the value of the <code> grid-area property </code> as in the next code line.</p>
+            <code>
+                .item1 {
+                    grid-area: header;
+                  }
+            </code>
+        </section>
+        <section class="main-section" id="Use_grid-area_property_without_creating_an_areas_template">
+            <header>Use grid-area without creating an areas template</header>
+            <p>If your grid doesn't have an areas template to reference, you can create an area on the fly for an item as is shown in the following code line.</p>
+            <code>
+                item1 { grid-area: 1/1/2/4; }
+            </code>
+            <code>/* grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at; */</code>
+        </section>
+    </main>
+</body>
+</html>
